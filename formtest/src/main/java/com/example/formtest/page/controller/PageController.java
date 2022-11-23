@@ -32,6 +32,31 @@ public class PageController {
         }
     }
 
+    @GetMapping("/goChat")
+    public String goChat(HttpSession session) {
+        if (session.getAttribute("email") == null) { //로그인 안한 경우
+            return "login";
+        } else {
+            return "chatindex";
+        }
+    }
+
+    @GetMapping("/goChatMain")
+    public String goChatMain(String nickName, HttpSession session) {
+        session.setAttribute("nickName",nickName);
+
+        return "chatmain";
+    }
+
+    @GetMapping("/goCalendar")
+    public String goCalendar(HttpSession session) {
+        if (session.getAttribute("email") == null) { //로그인 안한 경우
+            return "login";
+        } else {
+            return "calendarindex";
+        }
+    }
+
     @GetMapping("/logout")
     public String logout(HttpSession session) {
 //        session.invalidate(); //이건 절대 쓰지 마세요 !!

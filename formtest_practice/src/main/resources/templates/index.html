@@ -19,7 +19,7 @@
     .container{
       background: #2d3e3f;
       width: 350px;
-      height: 420px;
+      height: 295px;
       padding-bottom: 20px;
       position: absolute;
       top:50%;
@@ -109,8 +109,7 @@
 
 <div class="container">
     <div class="box">
-        <h1 style="font-size: 35px;color: white;" th:if="${session.email} == null">간단 사이트</h1>
-        <h1 style="font-size: 35px;color: white;" th:if="${session.email} != null" th:text="${session.email}"></h1>
+      <h1 style="font-size: 35px;color: white;">간단 사이트</h1>
     </div>
 
     <div class="box">
@@ -129,18 +128,6 @@
     <div class="box">
         <div class="fr" style="text-align: left;width: 100%;padding-bottom: 5px;">
             <button onclick="location.href='/goMember'" style="height:50px;text-align:center; font-size: 30px; width: 100%;">회원전용이동</button>
-        </div>
-    </div>
-
-    <div class="box">
-        <div class="fr" style="text-align: left;width: 100%;padding-bottom: 5px;">
-            <button onclick="location.href='/goChat'" style="height:50px;text-align:center; font-size: 30px; width: 100%;">채팅</button>
-        </div>
-    </div>
-
-    <div class="box">
-        <div class="fr" style="text-align: left;width: 100%;padding-bottom: 5px;">
-            <button onclick="location.href='/goCalendar'" style="height:50px;text-align:center; font-size: 30px; width: 100%;">할 일 달력</button>
         </div>
     </div>
 
